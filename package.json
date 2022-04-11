@@ -1,0 +1,43 @@
+{
+  "name": "cis-197-final-project",
+  "version": "1.0.0",
+  "description": "Settlers of Catan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./frontend/src/index.html",
+    "build": "parcel ./frontend/src/index.html",
+    "server": "nodemon backend/server.js",
+    "dev": "concurrently --kill-others \"npm run build\" \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pocofrosty/CiS-197-Final-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pocofrosty/CiS-197-Final-Project/issues"
+  },
+  "homepage": "https://github.com/pocofrosty/CiS-197-Final-Project#readme",
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  },
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10",
+    "nodemon": "^2.0.15",
+    "parcel": "^2.4.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "socket.io": "^4.4.1"
+  }
+}
