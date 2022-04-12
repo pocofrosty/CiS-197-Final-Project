@@ -38,9 +38,11 @@
     "mongoose": "^6.2.10",
     "nodemon": "^2.0.15",
     "parcel": "^2.4.1",
+    "passport-local": "^1.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-hexgrid": "^1.0.4",
+    "react-router-dom": "^6.3.0",
     "socket.io": "^4.4.1"
   }
 }
