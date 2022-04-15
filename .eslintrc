@@ -72,7 +72,8 @@
             }
         ],
         "react/button-has-type": 0,
-        "default-param-last": 0
+        "default-param-last": 0,
+        "import/no-named-as-default": 0
     },
     "parserOptions": {
         "ecmaVersion": 2017
