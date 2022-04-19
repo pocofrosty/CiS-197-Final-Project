@@ -21,10 +21,13 @@ const io = new Server(server)
 app.use(express.json())
 app.use(express.static('dist'))
 
+app.use(cors())
+
 app.use('/account', AccountRouter)
 
-app.get('/', (req, res) => {
-  res.send('hello world')
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send(err.message)
 })
 
 app.get('*', (req, res) => {

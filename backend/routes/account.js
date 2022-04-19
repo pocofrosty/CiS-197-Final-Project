@@ -1,14 +1,8 @@
 const express = require('express')
 
-const Account = require('../models/Account')
+const Account = require('../models/account')
 
 const router = express.Router()
-
-router.get('/test', async (req, res) => {
-  console.log(1)
-  res.send('test')
-})
-
 router.post('/signup', async (req, res, next) => {
   const { body: { username, password } } = req
   try {
@@ -22,8 +16,8 @@ router.post('/signup', async (req, res, next) => {
 router.post('/login', async (req, res, next) => {
   const { body: { username: loginUsername, password: loginPassword } } = req
   try {
-    const account = await Account.findOne({ username: loginUsername })
-    if (account.password === loginPassword) {
+    const user = await Account.findOne({ username: loginUsername })
+    if (user.password === loginPassword) {
       req.session.username = loginUsername
       res.send('Successful Login')
     } else {
