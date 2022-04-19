@@ -5,6 +5,7 @@ import {
 
 import SignUpForm from './components/SignUpForm'
 import LoginForm from './components/LoginForm'
+import GameBoard from './components/Gameboard'
 
 // eslint-disable-next-line no-undef
 export default App = () => {
@@ -16,6 +17,7 @@ export default App = () => {
         <Route path="/" element={<Layout />}>
           <Route path="signup" element={<SignUpForm />} />
           <Route path="login" element={<LoginForm />} />
+          <Route path="gameboard" element={<GameBoard />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

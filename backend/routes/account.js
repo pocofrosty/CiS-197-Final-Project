@@ -4,6 +4,11 @@ const Account = require('../models/Account')
 
 const router = express.Router()
 
+router.get('/test', async (req, res) => {
+  console.log(1)
+  res.send('test')
+})
+
 router.post('/signup', async (req, res, next) => {
   const { body: { username, password } } = req
   try {

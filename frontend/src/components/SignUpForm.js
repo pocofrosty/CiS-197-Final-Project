@@ -5,7 +5,7 @@ import TextBox from './subcomponents/TextBox'
 import Title from './subcomponents/Title'
 import SignUpButton from './subcomponents/SignupButton'
 
-const SignUpForm = ({}) => {
+const SignUpForm = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
