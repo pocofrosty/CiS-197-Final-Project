@@ -57,7 +57,7 @@ class App extends Component {
               ))
             }
           </Layout>
-          <Pattern id="temp-pattern" link="https://i.ibb.co/bsYFFcf/Forest-Pointed.png" />
+          <Pattern id="temp-pattern" link="https://i.ibb.co/swyxD9y/Forest-Pointed-Backgroundless.png" size={{x: 8, y: 7.5} }/>
         </HexGrid>
       </div>
     )
