@@ -4,6 +4,8 @@ import {
   Routes, Route, Outlet, Link,
 } from 'react-router-dom'
 
+import brick from '../assets/brick.png'
+
 import {
   Pattern, HexGrid, Layout, Hexagon, Text, GridGenerator, HexUtils,
 } from 'react-hexgrid'
@@ -11,6 +13,7 @@ import {
 import configs from './configurations.json'
 
 class App extends Component {
+
   constructor(props) {
     super(props)
     const config = configs.hexagon
@@ -46,8 +49,6 @@ class App extends Component {
         <HexGrid width={config.width} height={config.height}>
           <Layout size={size} flat={layout.flat} spacing={layout.spacing} origin={config.origin}>
             {
-              // note: key must be unique between re-renders.
-              // using config.mapProps+i makes a new key when the goal template chnages.
               hexagons.map((hex, i) => (
                 // eslint-disable-next-line react/no-array-index-key
                 <Hexagon key={config.mapProps + i} q={hex.q} r={hex.r} s={hex.s} fill="temp-pattern">
@@ -56,7 +57,7 @@ class App extends Component {
               ))
             }
           </Layout>
-          <Pattern id="temp-pattern" src="assets\brick.png" />
+          <Pattern id="temp-pattern" link="https://i.ibb.co/bsYFFcf/Forest-Pointed.png" />
         </HexGrid>
       </div>
     )
