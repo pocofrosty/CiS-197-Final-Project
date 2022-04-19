@@ -56,7 +56,7 @@ class App extends Component {
               ))
             }
           </Layout>
-          <Pattern id="temp-pattern" link="file:///C:/Users/dzhen/Desktop/test.png" />
+          <Pattern id="temp-pattern" src="assets\brick.png" />
         </HexGrid>
       </div>
     )
