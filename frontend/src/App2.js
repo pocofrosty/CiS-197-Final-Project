@@ -10,6 +10,7 @@ import {
 
 import configs from './configurations.json'
 
+const i = 0
 class App extends Component {
   constructor(props) {
     super(props)
@@ -33,7 +34,7 @@ class App extends Component {
     const size = { x: layout.width, y: layout.height }
     return (
       <div className="App">
-        <h2>Select grid type and configuration from dropdown.</h2>
+        <h2>Select grid typ3213e and configuration from dropdown.</h2>
         <div>
           <strong>Template: </strong>
           <select onChange={ev => this.changeType(ev)}>
@@ -49,12 +50,20 @@ class App extends Component {
               hexagons.map((hex, i) => (
                 // eslint-disable-next-line react/no-array-index-key
                 <Hexagon key={config.mapProps + i} q={hex.q} r={hex.r} s={hex.s} fill="temp-pattern">
-                  <Text>{HexUtils.getID(hex)}</Text>
+                  <button onClick={() => {
+                    console.log(1)
+                  }}
+                  >
+                    {' '}
+                    test
+                    {' '}
+
+                  </button>
                 </Hexagon>
               ))
             }
           </Layout>
-          <Pattern id="temp-pattern" link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Ore-Test.JPG?raw=true" size={{x: 7.5, y: 8} }/>
+          <Pattern id="temp-pattern" link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Forest-Test.JPG?raw=true" size={{ x: 7.5, y: 8 }} />
         </HexGrid>
       </div>
     )
