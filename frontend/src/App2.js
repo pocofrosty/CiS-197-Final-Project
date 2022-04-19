@@ -54,7 +54,7 @@ class App extends Component {
               ))
             }
           </Layout>
-          <Pattern id="temp-pattern" link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Forest-Test.JPG?raw=true" size={{x: 7.5, y: 8} }/>
+          <Pattern id="temp-pattern" link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Ore-Test.JPG?raw=true" size={{x: 7.5, y: 8} }/>
         </HexGrid>
       </div>
     )
