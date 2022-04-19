@@ -4,8 +4,6 @@ import {
   Routes, Route, Outlet, Link,
 } from 'react-router-dom'
 
-import brick from '../assets/brick.png'
-
 import {
   Pattern, HexGrid, Layout, Hexagon, Text, GridGenerator, HexUtils,
 } from 'react-hexgrid'
@@ -13,7 +11,6 @@ import {
 import configs from './configurations.json'
 
 class App extends Component {
-
   constructor(props) {
     super(props)
     const config = configs.hexagon
@@ -57,7 +54,7 @@ class App extends Component {
               ))
             }
           </Layout>
-          <Pattern id="temp-pattern" link="https://i.ibb.co/swyxD9y/Forest-Pointed-Backgroundless.png" size={{x: 8, y: 7.5} }/>
+          <Pattern id="temp-pattern" link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Water-Pointed-Backgroundless.png?raw=true" size={{x: 7, y: 8} }/>
         </HexGrid>
       </div>
     )
