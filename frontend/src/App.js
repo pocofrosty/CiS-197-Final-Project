@@ -36,7 +36,7 @@ function App() {
           <Hexagon q={-2} r={0} s={1} />
           <Path start={new Hex(0, 0, 0)} end={new Hex(-2, 0, 1)} />
         </Layout>
-        <Pattern id="pat-1" link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Brick-Pointed-Backgroundless%20(1).png?raw=true" />
+        <Pattern id="pat-1" link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Forest-Pointed.png?raw=true" size={{x: 8, y: 15}}/>
         <Pattern id="pat-2" link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Brick-Test.JPG?raw=true" />
       </HexGrid>
     </div>
