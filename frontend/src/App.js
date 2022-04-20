@@ -3,6 +3,7 @@ import {
   Routes, Route, Outlet,
 } from 'react-router-dom'
 
+import axios from 'axios'
 import SignUpForm from './components/SignUpForm'
 import LoginForm from './components/LoginForm'
 import GameBoard from './components/Gameboard'
@@ -11,6 +12,7 @@ import GameBoard from './components/Gameboard'
 export default App = () => {
   const [currentUsename, setCurrentUsername] = useState('')
 
+  axios.defaults.baseURL = 'http://localhost:3000'
   return (
     <div>
       <Routes>

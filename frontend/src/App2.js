@@ -4,10 +4,6 @@ import {
   Routes, Route, Outlet, Link,
 } from 'react-router-dom'
 
-import {
-  Pattern, HexGrid, Layout, Hexagon, Text, GridGenerator, HexUtils,
-} from 'react-hexgrid'
-
 import configs from './configurations.json'
 
 const i = 0
@@ -34,7 +30,7 @@ class App extends Component {
     const size = { x: layout.width, y: layout.height }
     return (
       <div className="App">
-        <h2>Select grid typ3213e and configuration from dropdown.</h2>
+        <h2>Select grid type and configuration from dropdown.</h2>
         <div>
           <strong>Template: </strong>
           <select onChange={ev => this.changeType(ev)}>
