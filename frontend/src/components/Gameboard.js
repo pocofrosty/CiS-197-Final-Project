@@ -17,11 +17,19 @@ const GameBoard = () => {
       <Pattern id="5" size={{ x: 8.5, y: 8.5 }} link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Water-Test.JPG?raw=true" />
       <Pattern id="6" size={{ x: 7.5, y: 8 }} link="https://github.com/pocofrosty/CiS-197-Final-Project/blob/main/frontend/assets/Desert-Test.JPG?raw=true" />
     </>
-
   )
+
+  const HexagonData = {}
+  hexagons.forEach((ele, idx) => {
+    HexagonData[`(${ele.q},${ele.r},${ele.s})`] = {
+      ID: ele.q + ele.r + ele.s,
+    }
+    console.log(`(${ele.q},${ele.r},${ele.s})`)
+  })
+
   return (
     <div className="App">
-      <label>Test </label>
+      <label> Test </label>
       <HexGrid width={800} height={800}>
         {initializePatterns()}
         <Layout size={{ x: 8, y: 8 }} flat={false} spacing={1.02} origin={{ x: 0, y: 0 }}>
@@ -34,7 +42,7 @@ const GameBoard = () => {
                   r={hex.r}
                   s={hex.s}
                   onClick={() => {
-                    console.log(hex)
+                    console.log(HexagonData[`(${hex.q},${hex.r},${hex.s})`])
                   }}
                 >
                   <Text>
