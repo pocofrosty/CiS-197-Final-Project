@@ -4,13 +4,17 @@ const path = require('path')
 const http = require('http')
 const { Server } = require('socket.io')
 const cors = require('cors')
-const cookieSession = require('cookie-parser')
+const cookieSession = require('cookie-session')
+const passport = require('passport')
 
-const PassportSetup = require('./authentication/passport-setup')
 const AccountRouter = require('./routes/account')
 const AuthRouter = require('./routes/auth')
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://dzheng2480:chinainn%409209@catan.wv8bp.mongodb.net/test'
+const keys = require('./keys')
+
+const PassportSetup = require('./authentication/passport-setup')
+
+const MONGO_URI = process.env.MONGO_URI || keys.mongoDB.database
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
@@ -19,18 +23,20 @@ mongoose.connect(MONGO_URI, {
 
 const app = express()
 
-app.use(express.json())
-app.use(express.static('dist'))
-app.use(cors())
-
 app.use(cookieSession({
-  name: 'session',
-  keys: ['apples'],
+  keys: [keys.session.cookieKey],
   maxAge: 60 * 60 * 1000,
 }))
 
 const server = http.createServer(app)
 const io = new Server(server)
+
+app.use(express.json())
+app.use(express.static('dist'))
+app.use(cors({ credentials: true, origin: true }))
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use('/auth', AuthRouter)
 
