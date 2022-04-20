@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import TextBox from './subcomponents/TextBox'
 import Title from './subcomponents/Title'
 import LoginButton from './subcomponents/LoginButton'
+import GoogleSignupButton from './subcomponents/GoogleSignupButton'
 
 const LoginForm = ({ setCurrentUsername }) => {
   const [username, setUsername] = useState('')
@@ -27,6 +28,7 @@ const LoginForm = ({ setCurrentUsername }) => {
       <br />
       <label> Don&apos;t have an account? </label>
       <Link className="text-blue-400" to="/signup"> Sign Up </Link>
+      <GoogleSignupButton />
     </div>
   )
 }

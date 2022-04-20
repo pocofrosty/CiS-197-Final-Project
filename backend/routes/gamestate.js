@@ -1,6 +1,6 @@
 const express = require('express')
 
-const Gamestate = require('../models/Gamestate')
+const Gamestate = require('../models/gamestate')
 
 const router = express.Router()
 
